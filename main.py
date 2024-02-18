@@ -1,7 +1,6 @@
 import os
 from dotenv import load_dotenv
 from logic import get_transcription, getFiles, write_transcriptions_to_csv
-import csv
 
 
 load_dotenv()

@@ -14,6 +14,14 @@ load_dotenv()
 
 API_KEY = os.getenv("KEY")
 
+def getFiles():
+    folder = 'videos'
+
+    files = os.listdir(folder)
+
+    print(files)
+
+    return files
 
 def get_transcription(paths):
     transcriptions = []
@@ -56,16 +64,6 @@ def get_transcription(paths):
             print(f"Exception: {e}")
     
     return transcriptions
-
-
-def getFiles():
-    folder = 'videos'
-
-    files = os.listdir(folder)
-
-    print(files)
-
-    return files
 
 def write_transcriptions_to_csv(transcriptions, csv_file_name):
     
